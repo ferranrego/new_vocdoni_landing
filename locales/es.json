@@ -1,0 +1,248 @@
+{
+  "language": "Español",
+
+  "navbar": {
+    "about": "Sobre nosotros",
+    "solutions": "Soluciones",
+    "technology": "Tecnología",
+    "resources": "Recursos",
+    "contact": "Contacto",
+    "productFeatures": {
+      "digitalVotingPlatform": {
+        "title": "Plataforma de Votación Digital",
+        "description": "Sistema de votación digital seguro, transparente y verificable para cualquier organización."
+      },
+      "sdk": {
+        "title": "SDK y API",
+        "description": "Integra fácilmente una capa de voto seguro en tus aplicaciones existentes."
+      },
+      "customProjects": {
+        "title": "Proyectos a medida",
+        "description": "Soluciones de gobernanza personalizadas para necesidades específicas."
+      }
+    },
+    "technologyItems": {
+      "blockchainProtocol": {
+        "title": "Protocolo Blockchain",
+        "description": "El libro mayor descentralizado que garantiza la inmutabilidad."
+      },
+      "zkp": {
+        "title": "Pruebas de Conocimiento Cero",
+        "description": "Implementación anónima que protege la privacidad del votante."
+      },
+      "openSource": {
+        "title": "Código Abierto",
+        "description": "Código auditable y transparente disponible para todos."
+      }
+    },
+    "aboutItems": {
+      "mission": {
+        "title": "Nuestra misión",
+        "description": "Por qué construimos el futuro de la gobernanza."
+      },
+      "team": {
+        "title": "Equipo",
+        "description": "Conoce a las personas detrás de Vocdoni."
+      },
+      "careers": {
+        "title": "Carreras",
+        "description": "Únete a nuestro camino."
+      }
+    },
+    "resourcesItems": {
+      "blog": {
+        "title": "Blog",
+        "description": "Últimos artículos y novedades."
+      },
+      "successStories": {
+        "title": "Casos de éxito",
+        "description": "Historias de clientes y resultados."
+      },
+      "guides": {
+        "title": "Guías",
+        "description": "Tutoriales y buenas prácticas."
+      },
+      "docs": {
+        "title": "Documentación",
+        "description": "Documentos técnicos y referencias de API."
+      }
+    },
+    "appButton": "App"
+  },
+
+  "languageSwitcher": {
+    "label": "Idioma"
+  },
+
+  "hero": {
+    "title": "Tomar decisiones nunca había sido tan",
+    "subtitle": "Vocdoni crea tecnología de votación en línea segura que hace que cada voz cuente.",
+    "badge": {
+      "label": "Vocdoni App",
+      "descriptionLong": "Una plataforma fácil de usar para votar",
+      "descriptionShort": "Vota fácilmente"
+    },
+    "ctaPrimary": "Comenzar",
+    "ctaSecondary": "Chatea con nosotros",
+    "trustedBy": "Con la confianza de organizaciones innovadoras",
+    "dynamicWords": ["fácil", "seguro", "sencillo"]
+  },
+
+  "features": {
+    "eyebrow": "Soluciones",
+    "title": "Soluciones de votación digital segura",
+    "description": "Ya sea que necesites una votación rápida, una integración fluida para desarrolladores o una solución de gobernanza totalmente a medida, Vocdoni te cubre. Confiado por organizaciones de todo el mundo para Juntas Generales, elecciones de consejo, referéndums y presupuestos participativos.",
+    "cards": {
+      "app": {
+        "title": "App",
+        "description": "Lanza elecciones en línea seguras en minutos con nuestra app fácil de usar. Perfecta para asociaciones, municipios, colegios profesionales, cooperativas u organizaciones que necesitan votaciones simples, seguras y accesibles sin complejidad técnica.",
+        "cta": "Iniciar una votación"
+      },
+      "integrations": {
+        "title": "Integraciones",
+        "description": "Pensado para desarrolladores e integradores, nuestro SDK te permite incorporar sin esfuerzo la infraestructura de voto seguro de Vocdoni en tus propias plataformas.",
+        "cta": "Explora nuestro SDK"
+      },
+      "projects": {
+        "title": "Proyectos",
+        "description": "Para gobiernos, empresas y grandes organizaciones que necesitan sistemas de gobernanza a medida, ofrecemos soluciones de extremo a extremo con soporte experto e infraestructura dedicada.",
+        "cta": "Solicitar un proyecto a medida"
+      }
+    }
+  },
+
+  "comparison": {
+    "eyebrow": "Comparativa",
+    "title": "La ventaja de Vocdoni",
+    "description": "Descubre cómo Vocdoni supera a las plataformas de voto tradicionales y digitales en seguridad, coste, escalabilidad y transparencia, con la fuerza añadida del código abierto.",
+    "featureLabels": [
+      "Privacidad y seguridad",
+      "Accesibilidad remota",
+      "Transparencia",
+      "Escalabilidad",
+      "Coste",
+      "Sostenibilidad"
+    ],
+    "options": {
+      "vocdoni": {
+        "name": "Vocdoni",
+        "privacySecurity": "Anónimo y descentralizado",
+        "remoteAccessibility": "Vota desde cualquier lugar y dispositivo",
+        "transparency": "Totalmente auditable y de código abierto",
+        "scalability": "Millones de votos, alcance global",
+        "cost": "≈10× más económico",
+        "sustainability": "Sin papel, baja huella de carbono"
+      },
+      "traditional": {
+        "name": "Voto tradicional",
+        "privacySecurity": "Secreto basado en papel",
+        "remoteAccessibility": "Solo presencial",
+        "transparency": "Recuentos manuales",
+        "scalability": "Lento y con muchos recursos",
+        "cost": "Altos costes logísticos",
+        "sustainability": "Alto consumo de papel y desplazamientos"
+      },
+      "otherDigital": {
+        "name": "Otros votos digitales",
+        "privacySecurity": "Seudoanónimo y centralizado",
+        "remoteAccessibility": "Vota desde cualquier lugar y dispositivo",
+        "transparency": "Sistemas centralizados opacos",
+        "scalability": "Capacidad de carga limitada",
+        "cost": "Moderado",
+        "sustainability": "Sin papel, baja huella de carbono"
+      }
+    }
+  },
+
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "title": "Historias reales, impacto real",
+    "description": "Desde movimientos de base hasta grandes instituciones, descubre cómo Vocdoni transforma la toma de decisiones con tecnología segura, accesible y transparente.",
+    "items": [
+      {
+        "name": "Jordi Estiarte",
+        "role": "Alcalde",
+        "company": "Ayuntamiento de Bellpuig",
+        "content": "Elegimos la tecnología de Vocdoni porque creemos que es el futuro de cómo deberían ser las elecciones reales de cualquier tipo. El voto electrónico está abierto a todos y facilita el proceso a la ciudadanía."
+      },
+      {
+        "name": "Ton Barnils",
+        "role": "Director General",
+        "company": "Centre Excursionista de Catalunya",
+        "content": "Elegimos Vocdoni porque garantiza una participación segura, confiable y transparente para todos nuestros miembros en la asamblea general anual."
+      },
+      {
+        "name": "Anna Giralt",
+        "role": "Directora Ejecutiva",
+        "company": "Òmnium Cultural",
+        "content": "La apuesta por Vocdoni ha sido clara, porque en Òmnium Cultural queríamos un sistema de votación seguro y verificable que nos permitiera celebrar nuestras asambleas estatutarias con todas las garantías para los más de 180.000 socios de la entidad."
+      },
+      {
+        "name": "Oscar Tirivò",
+        "role": "Director de TI",
+        "company": "Enginyers Industrials de Catalunya",
+        "content": "Vocdoni nos ofrece un sistema de votación fácil, seguro, anónimo y escalable, totalmente integrado en nuestro entorno institucional. ¡Seguiremos confiando en él, sin duda!"
+      }
+    ]
+  },
+
+  "footer": {
+    "mission": "Vocdoni ofrece la tecnología de votación digital más segura y accesible del mundo. Nuestra misión es permitir que organizaciones de cualquier tamaño tomen decisiones colectivas con total integridad.",
+    "product": {
+      "title": "Producto",
+      "links": ["Voto público", "Gestión de censo", "API Docs", "Precios"]
+    },
+    "company": {
+      "title": "Compañía",
+      "links": ["Sobre nosotros", "Casos de éxito", "Kit de prensa", "Carreras"]
+    },
+    "newsletter": {
+      "title": "Suscríbete al boletín",
+      "placeholder": "Tu correo electrónico..."
+    },
+    "certified": "Certificado",
+    "gdpr": "Cumple con GDPR",
+    "copyright": "© {{year}} Vocdoni. Hecho con ❤️ en Barcelona.",
+    "rights": "Todos los derechos reservados. Votación digital segura para todos."
+  },
+
+  "heroCards": {
+    "step1": "Paso 1",
+    "censusCreation": "Creación del censo",
+    "nameLabel": "Nombre",
+    "statusLabel": "Estado",
+    "eligible": "Elegible",
+    "notEligible": "No elegible",
+    "step2": "Paso 2",
+    "activeElection": "Elección activa",
+    "electionTitle": "Asamblea General 2025",
+    "electionCloses": "La votación cierra en 24h",
+    "participation": "Participación",
+    "votedJustNow": "acaba de votar",
+    "step3": "Paso 3",
+    "verifiedResults": "Resultados verificados",
+    "option": "Opción",
+    "abstain": "Abstención",
+    "legallyValid": "Legalmente válido"
+  },
+
+  "previews": {
+    "appPreview": {
+      "optionA": "Opción A",
+      "optionB": "Opción B",
+      "optionC": "Opción C",
+      "castVote": "Emitir voto"
+    },
+    "integrationsPreview": {
+      "install": "install @vocdoni/sdk",
+      "import": "import",
+      "const": "const",
+      "createElection": "createElection"
+    },
+    "projectsPreview": {
+      "activeVoters": "Votantes activos",
+      "turnout": "Participación",
+      "locations": "Ubicaciones"
+    }
+  }
+}
