@@ -24,6 +24,7 @@ const logos = [
 
 const words = ["easy", "secure", "simple"];
 
+const Hero = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
 
@@ -57,7 +58,7 @@ const words = ["easy", "secure", "simple"];
             </a>
 
             <h1 className="text-3xl font-bold tracking-tight sm:text-5xl lg:text-6xl max-w-2xl break-words">
-              {t('hero.title')}{" "}
+              {t("hero.title")}{" "}
               <span className="inline-flex min-w-[0px] xs:min-w-[120px] text-primary">
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -75,7 +76,7 @@ const words = ["easy", "secure", "simple"];
             </h1>
 
             <p className="text-base sm:text-lg text-muted-foreground max-w-[600px] leading-relaxed break-words">
-              {t('hero.subtitle')}
+              {t("hero.subtitle")}
             </p>
 
             {/* Mobile Cards - Between text and buttons */}
@@ -206,4 +207,6 @@ const words = ["easy", "secure", "simple"];
       </div>
     </section>
   );
-}
+};
+
+export default Hero;
