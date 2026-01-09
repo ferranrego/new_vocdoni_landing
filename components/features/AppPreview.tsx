@@ -1,26 +1,28 @@
 import { CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { useTranslation } from 'react-i18next'
 
 export default function AppPreview() {
+  const { t } = useTranslation()
   return (
     <Card className='w-48 p-4 space-y-3 bg-background/50 backdrop-blur-sm'>
       <div className='space-y-2'>
         <div className='flex items-center gap-2 text-sm'>
           <CheckCircle2 className='size-4 text-primary' />
-          <span className='text-muted-foreground'>Option A</span>
+          <span className='text-muted-foreground'>{t('previews.appPreview.optionA')}</span>
         </div>
         <div className='flex items-center gap-2 text-sm'>
           <CheckCircle2 className='size-4 text-muted-foreground' />
-          <span className='text-muted-foreground'>Option B</span>
+          <span className='text-muted-foreground'>{t('previews.appPreview.optionB')}</span>
         </div>
         <div className='flex items-center gap-2 text-sm'>
           <CheckCircle2 className='size-4 text-muted-foreground' />
-          <span className='text-muted-foreground'>Option C</span>
+          <span className='text-muted-foreground'>{t('previews.appPreview.optionC')}</span>
         </div>
       </div>
       <Button className='w-full h-8 text-xs' size='sm'>
-        Cast Vote
+        {t('previews.appPreview.castVote')}
       </Button>
     </Card>
   )

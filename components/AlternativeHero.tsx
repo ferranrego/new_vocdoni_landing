@@ -50,7 +50,11 @@ export default function AlternativeHero() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 sm:gap-3 p-1 rounded-3xl border border-border/40 bg-muted/20 text-xs transition-all hover:bg-muted/30 group cursor-pointer max-w-full shadow-sm"
             >
-              <span className="bg-foreground text-background px-2.5 py-0.5 rounded-full font-semibold shrink-0">
+              <span className="bg-foreground text-background px-2.5 py-0.5 rounded-full font-semibold shrink-0 flex items-center gap-1.5">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
                 Vocdoni App
               </span>
               <span className="text-muted-foreground font-medium pr-2 leading-tight truncate flex items-center gap-1">
@@ -83,15 +87,21 @@ export default function AlternativeHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Button size="lg" className="rounded-full gap-2 relative overflow-hidden group w-full sm:w-auto">
-                <span className="absolute inset-0 bg-[linear-gradient(110deg,transparent,20%,rgba(255,255,255,0.3),40%,transparent)] -translate-x-full group-hover:animate-shimmer content-[''] pointer-events-none" />
-                {t("hero.ctaPrimary")} <ArrowRight className="h-4 w-4" />
+              <Button
+                size="lg"
+                className="group text-base transition-all duration-300 has-[>svg]:px-6 w-full sm:w-auto"
+                asChild
+              >
+                <a href="https://app.vocdoni.io" className="inline-flex items-center gap-2">
+                  {t("hero.ctaPrimary")}
+                  <ArrowRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </a>
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 asChild
-                className="rounded-full gap-2 w-full sm:w-auto border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10"
+                className="gap-2 w-full sm:w-auto border-[#25D366] text-[#25D366] hover:bg-[#25D366]/10"
               >
                 <a href="https://wa.me/34621501155" target="_blank" rel="noopener noreferrer">
                   <svg

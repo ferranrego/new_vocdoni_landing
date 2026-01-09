@@ -1,14 +1,11 @@
-import Hero from "@/components/Hero";
+import AlternativeHero from "@/components/AlternativeHero";
 import ComparisonSection from "@/components/ComparisonSection";
 import Solutions from "@/components/shadcn-studio/blocks/features-section-10/solutions-section";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/shadcn-studio/blocks/cta-section-09/cta-section-09";
 import AboutUs from "@/components/shadcn-studio/blocks/about-us-page-07/about-us-page-07";
-import { useTranslation } from "react-i18next";
 
 export default function Page() {
-  const { t } = useTranslation();
-
   const comparisonOptions = [
     {
       name: "comparison.options.vocdoni.name",
@@ -72,46 +69,47 @@ export default function Page() {
 
   const aboutStatCards = [
     {
-      title: t("aboutUs.statCards.votes.title"),
-      description: t("aboutUs.statCards.votes.description")
+      title: "200,000+",
+      description: "Votes securely processed by our protocol"
     },
     {
-      title: t("aboutUs.statCards.affordable.title"),
-      description: t("aboutUs.statCards.affordable.description")
+      title: "10x More Affordable",
+      description: "Cost-effective solutions compared to traditional platforms"
     },
     {
-      title: t("aboutUs.statCards.turnout.title"),
-      description: t("aboutUs.statCards.turnout.description")
+      title: "30% Higher Turnout",
+      description: "Average participation increase using Vocdoni"
     },
     {
-      title: t("aboutUs.statCards.experience.title"),
-      description: t("aboutUs.statCards.experience.description")
+      title: "7+ Years",
+      description: "Building secure digital voting technology"
     }
   ];
 
   const aboutFeatureCards = [
     {
-      title: t("aboutUs.featureCards.security.title"),
-      description: t("aboutUs.featureCards.security.description")
+      title: "Maximum Security",
+      description: "Enterprise-grade encryption and privacy protection ensure every vote is secure and anonymous"
     },
     {
-      title: t("aboutUs.featureCards.compliance.title"),
-      description: t("aboutUs.featureCards.compliance.description")
+      title: "Legally Compliant",
+      description: "Our solutions meet regulatory requirements, giving you complete peace of mind"
     },
     {
-      title: t("aboutUs.featureCards.accessibility.title"),
-      description: t("aboutUs.featureCards.accessibility.description")
+      title: "Accessible Governance",
+      description: "Fair, transparent decision-making shouldn't be a luxury—it's a fundamental right we deliver"
     }
   ];
 
   return (
     <>
-      <Hero />
+      <AlternativeHero />
       <AboutUs statCards={aboutStatCards} featureCards={aboutFeatureCards} />
       <Solutions />
       <ComparisonSection options={comparisonOptions} featureKeys={featureKeys} featureLabels={featureLabels} />
       <TestimonialsSection />
       <CTASection />
+      <Footer />
     </>
   );
 }

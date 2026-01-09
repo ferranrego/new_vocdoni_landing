@@ -4,6 +4,7 @@
   "navbar": {
     "about": "Sobre nosotros",
     "solutions": "Soluciones",
+    "useCases": "Casos de uso",
     "technology": "Tecnología",
     "resources": "Recursos",
     "contact": "Contacto",
@@ -19,6 +20,16 @@
       "customProjects": {
         "title": "Proyectos a medida",
         "description": "Soluciones de gobernanza personalizadas para necesidades específicas."
+      }
+    },
+    "solutionsHeader": "Todas las Soluciones",
+    "featuredSolution": {
+      "header": "Destacado",
+      "vocdoniApp": {
+        "title": "Vocdoni App",
+        "description": "Plataforma de votación lista para usar con implementación inmediata",
+        "cta": "Probar ahora",
+        "badge": "Popular"
       }
     },
     "technologyItems": {
@@ -95,17 +106,17 @@
     "cards": {
       "app": {
         "title": "App",
-        "description": "Lanza elecciones en línea seguras en minutos con nuestra app fácil de usar. Perfecta para asociaciones, municipios, colegios profesionales, cooperativas u organizaciones que necesitan votaciones simples, seguras y accesibles sin complejidad técnica.",
+        "description": "Elecciones en línea seguras en minutos. Sin complejidad técnica—solo votación simple y accesible para cualquier organización.",
         "cta": "Iniciar una votación"
       },
       "integrations": {
         "title": "Integraciones",
-        "description": "Pensado para desarrolladores e integradores, nuestro SDK te permite incorporar sin esfuerzo la infraestructura de voto seguro de Vocdoni en tus propias plataformas.",
+        "description": "Integra infraestructura de voto seguro en tus plataformas con nuestro SDK amigable para desarrolladores.",
         "cta": "Explora nuestro SDK"
       },
       "projects": {
         "title": "Proyectos",
-        "description": "Para gobiernos, empresas y grandes organizaciones que necesitan sistemas de gobernanza a medida, ofrecemos soluciones de extremo a extremo con soporte experto e infraestructura dedicada.",
+        "description": "Soluciones de gobernanza de nivel empresarial con soporte experto e infraestructura dedicada para necesidades complejas.",
         "cta": "Solicitar un proyecto a medida"
       }
     }
@@ -163,25 +174,29 @@
         "name": "Jordi Estiarte",
         "role": "Alcalde",
         "company": "Ayuntamiento de Bellpuig",
-        "content": "Elegimos la tecnología de Vocdoni porque creemos que es el futuro de cómo deberían ser las elecciones reales de cualquier tipo. El voto electrónico está abierto a todos y facilita el proceso a la ciudadanía."
+        "content": "Elegimos la tecnología de Vocdoni porque creemos que es el futuro de cómo deberían ser las elecciones reales de cualquier tipo. El voto electrónico está abierto a todos y facilita el proceso a la ciudadanía.",
+        "logo": "/assets/bellpuig-logo.png"
       },
       {
         "name": "Ton Barnils",
         "role": "Director General",
         "company": "Centre Excursionista de Catalunya",
-        "content": "Elegimos Vocdoni porque garantiza una participación segura, confiable y transparente para todos nuestros miembros en la asamblea general anual."
+        "content": "Elegimos Vocdoni porque garantiza una participación segura, confiable y transparente para todos nuestros miembros en la asamblea general anual.",
+        "logo": "/assets/cec-logo.png"
       },
       {
         "name": "Anna Giralt",
         "role": "Directora Ejecutiva",
         "company": "Òmnium Cultural",
-        "content": "La apuesta por Vocdoni ha sido clara, porque en Òmnium Cultural queríamos un sistema de votación seguro y verificable que nos permitiera celebrar nuestras asambleas estatutarias con todas las garantías para los más de 180.000 socios de la entidad."
+        "content": "La apuesta por Vocdoni ha sido clara, porque en Òmnium Cultural queríamos un sistema de votación seguro y verificable que nos permitiera celebrar nuestras asambleas estatutarias con todas las garantías para los más de 180.000 socios de la entidad.",
+        "logo": "/assets/omnium-logo.png"
       },
       {
         "name": "Oscar Tirivò",
         "role": "Director de TI",
         "company": "Enginyers Industrials de Catalunya",
-        "content": "Vocdoni nos ofrece un sistema de votación fácil, seguro, anónimo y escalable, totalmente integrado en nuestro entorno institucional. ¡Seguiremos confiando en él, sin duda!"
+        "content": "Vocdoni nos ofrece un sistema de votación fácil, seguro, anónimo y escalable, totalmente integrado en nuestro entorno institucional. ¡Seguiremos confiando en él, sin duda!",
+        "logo": "/assets/eic-logo.png"
       }
     ]
   },
@@ -243,6 +258,280 @@
       "activeVoters": "Votantes activos",
       "turnout": "Participación",
       "locations": "Ubicaciones"
+    }
+  },
+
+  "aboutUs": {
+    "eyebrow": "Sobre Vocdoni",
+    "title": "Pioneros de la Democracia Digital",
+    "description": "Vocdoni ofrece tecnología de votación digital segura y que prioriza la privacidad, empoderando a comunidades, asociaciones e instituciones para tomar decisiones colectivas con completa transparencia y confianza. Estamos construyendo un mundo donde la participación democrática sucede en cualquier lugar, desde cualquier dispositivo—sin intermediarios, sin barreras.",
+    "readMore": "Leer más",
+    "imageAlt": "Tecnología de votación digital y democracia segura",
+    "statCards": {
+      "votes": {
+        "title": "200.000+",
+        "description": "Votos procesados de forma segura por nuestro protocolo"
+      },
+      "affordable": {
+        "title": "10 veces más económico",
+        "description": "Soluciones rentables en comparación con plataformas tradicionales"
+      },
+      "turnout": {
+        "title": "30% mayor participación",
+        "description": "Aumento promedio de participación usando Vocdoni"
+      },
+      "experience": {
+        "title": "Más de 7 años",
+        "description": "Construyendo tecnología de votación digital segura"
+      }
+    },
+    "featureCards": {
+      "security": {
+        "title": "Máxima seguridad",
+        "description": "Encriptación de nivel empresarial y protección de privacidad garantizan que cada voto sea seguro y anónimo"
+      },
+      "compliance": {
+        "title": "Legalmente conforme",
+        "description": "Nuestras soluciones cumplen con los requisitos regulatorios, brindándote total tranquilidad"
+      },
+      "accessibility": {
+        "title": "Gobernanza accesible",
+        "description": "La toma de decisiones justa y transparente no debería ser un lujo—es un derecho fundamental que entregamos"
+      }
+    }
+  },
+
+  "cta": {
+    "title": "¿Listo para transformar tu proceso de votación?",
+    "description": "Únete a organizaciones de todo el mundo que usan Vocdoni para votación digital segura, transparente y anónima. Comienza tu camino hacia la democracia descentralizada hoy.",
+    "button": "Lanzar Vocdoni App",
+    "imageAlt": "Cuadrícula de maquetas de sitios web"
+  },
+
+  "useCases": {
+    "hero": {
+      "eyebrow": "Casos de uso e historias de éxito",
+      "title": "Transformando la democracia en todos los sectores",
+      "description": "Desde ayuntamientos hasta clubes deportivos, asociaciones profesionales hasta partidos políticos—descubre cómo organizaciones de todo el mundo aprovechan la plataforma de votación digital segura, transparente y verificable de Vocdoni para revolucionar la gobernanza y el compromiso de los miembros.",
+      "ctaPrimary": "Explorar casos de uso",
+      "ctaSecondary": "Ver historias de éxito"
+    },
+    "grid": {
+      "eyebrow": "Soluciones por sector",
+      "title": "Confianza en todos los sectores",
+      "description": "Vocdoni sirve a organizaciones de todos los tamaños y tipos, desde pequeñas asociaciones hasta grandes instituciones con millones de votantes.",
+      "keyUseCases": "Casos de uso clave:",
+      "featuredCaseStudy": "Caso de estudio destacado",
+      "trustedBy": "Confían en nosotros:",
+      "learnMore": "Más información",
+      "cases": {
+        "citiesCouncils": {
+          "title": "Ayuntamientos y gobernanza municipal",
+          "description": "Empoderando a los gobiernos locales con votación digital segura para referéndums, presupuestos participativos y consultas públicas. Reduce costes mientras aumentas la participación ciudadana en procesos democráticos.",
+          "features": [
+            "Referéndums locales y encuestas vinculantes",
+            "Presupuestos participativos",
+            "Aprobaciones presupuestarias",
+            "Sondeos de opinión pública",
+            "Elecciones especiales"
+          ],
+          "caseStudy": "Ayuntamiento de Bellpuig",
+          "caseStudyDescription": "Primera institución pública española en realizar un referéndum 100% digital con una participación del 31,67%"
+        },
+        "associations": {
+          "title": "Organizaciones comunitarias y asociaciones",
+          "description": "Fortalece el compromiso de los miembros y la integridad organizativa con votaciones transparentes y seguras para elecciones de consejos, decisiones políticas e iniciativas estratégicas. Genera confianza mediante la democracia verificable.",
+          "features": [
+            "Elecciones de miembros del consejo",
+            "Aprobaciones de iniciativas importantes",
+            "Enmiendas de estatutos",
+            "Encuestas y sondeos a miembros",
+            "Decisiones estratégicas"
+          ],
+          "caseStudy": "Òmnium Cultural",
+          "caseStudyDescription": "Más de 190.000 miembros en Europa confían en Vocdoni para votaciones seguras y verificables"
+        },
+        "sportsClubs": {
+          "title": "Clubes deportivos y organizaciones de aficionados",
+          "description": "Gestiona millones de votos sin problemas para elecciones de clubes y decisiones importantes. Aumenta la participación de los miembros mientras reduces la carga administrativa a través de votación digital accesible y transparente.",
+          "features": [
+            "Elecciones de directivos del club",
+            "Aprobaciones de gastos importantes",
+            "Cambios de políticas y enmiendas",
+            "Encuestas de participación de aficionados",
+            "Votación de miembros internacionales"
+          ],
+          "caseStudy": "FC Barcelona",
+          "caseStudyDescription": "Votación blockchain revolucionaria para participación global de aficionados con seguridad 2FA"
+        },
+        "professionalBodies": {
+          "title": "Asociaciones profesionales",
+          "description": "Modela las mejores prácticas de la industria con tecnología de votación de última generación. Realiza elecciones ejecutivas, votaciones políticas y revisiones de estándares profesionales con los más altos niveles de seguridad y transparencia.",
+          "features": [
+            "Elecciones de comité ejecutivo",
+            "Decisiones políticas y de defensa",
+            "Revisiones de estándares profesionales",
+            "Encuestas de compromiso de miembros",
+            "Votación remota para miembros distribuidos"
+          ],
+          "caseStudy": "COEIC",
+          "caseStudyDescription": "Asamblea General Anual modernizada con votación blockchain e integración de transmisión en vivo"
+        },
+        "politicalParties": {
+          "title": "Partidos políticos",
+          "description": "Genera confianza y legitimidad mediante elecciones transparentes y verificables. Realiza primarias, elecciones de liderazgo y votaciones de políticas con confianza. Compatible con votación por orden de preferencia y múltiples tipos de elecciones.",
+          "features": [
+            "Elecciones primarias y selección de candidatos",
+            "Elecciones de liderazgo del partido",
+            "Votaciones de plataforma política",
+            "Encuestas de compromiso de miembros",
+            "Elecciones regionales y nacionales"
+          ],
+          "caseStudy": "Esquerra Republicana de Catalunya (ERC)",
+          "caseStudyDescription": "Votación nacional de alto riesgo con transparencia blockchain y soporte para votación por orden de preferencia"
+        },
+        "integrators": {
+          "title": "Integradores de software y proveedores de plataformas",
+          "description": "Integra infraestructura de votación de clase mundial en tu plataforma de gobernanza. Concéntrate en la experiencia del usuario mientras Vocdoni se encarga de la seguridad, verificabilidad y cumplimiento. Integración fácil de SDK y API.",
+          "features": [
+            "JavaScript SDK y REST API",
+            "Componentes UI preconfigurados",
+            "Verificabilidad universal",
+            "Cumplimiento GDPR listo para usar",
+            "Infraestructura escalable"
+          ],
+          "caseStudy": "Integración Decidim",
+          "caseStudyDescription": "Asociación oficial que trae votación blockchain a plataforma de democracia digital de código abierto"
+        }
+      }
+    },
+    "successStories": {
+      "eyebrow": "Historias de éxito",
+      "title": "Resultados reales de organizaciones reales",
+      "description": "Descubre cómo las organizaciones líderes en todos los sectores han transformado sus procesos de gobernanza con la plataforma de votación impulsada por blockchain de Vocdoni.",
+      "impact": "Impacto",
+      "keyHighlights": "Aspectos destacados clave",
+      "readFullCaseStudy": "Leer caso de estudio completo",
+      "joinTitle": "Únete a estas historias de éxito",
+      "joinDescription": "Organizaciones de todo el mundo confían en Vocdoni para votación digital segura, transparente y verificable. Ya seas una pequeña asociación o una institución importante con millones de votantes, nuestra plataforma se adapta a tus necesidades.",
+      "startFreeTrial": "Comienza tu prueba gratuita",
+      "scheduleDemo": "Programar una demostración",
+      "stories": {
+        "bellpuig": {
+          "organization": "Ayuntamiento de Bellpuig",
+          "industry": "Gobierno municipal",
+          "location": "Cataluña, España",
+          "quote": "Los ciudadanos pueden hacer oír su voz desde la comodidad de sus hogares o lugares de trabajo. Incluso si están en el extranjero, aún pueden ejercer su derecho al voto desde cualquier lugar del mundo.",
+          "author": "Alcalde Jordi Estiarte",
+          "stats": [
+            { "label": "Participación electoral", "value": "31,67%", "description": "Sin precedentes para un referéndum local no vinculante" },
+            { "label": "Votantes elegibles", "value": "3.458", "description": "Todos los ciudadanos mayores de 16 años" },
+            { "label": "Votos emitidos totales", "value": "1.095", "description": "Votación remota 24/7 habilitada" }
+          ],
+          "impact": "Primera consulta 100% digital realizada por una institución pública en España, demostrando el valor tangible de la gobernanza digital accesible, transparente y segura para la democracia.",
+          "highlights": [
+            "Autenticación por código QR para todos los votantes",
+            "Apoyo presencial en el ayuntamiento para residentes mayores",
+            "Verificación de votos en tiempo real en blockchain",
+            "Cero exclusión: accesible para todos los grupos demográficos"
+          ]
+        },
+        "omniumCultural": {
+          "organization": "Òmnium Cultural",
+          "industry": "Asociación cultural",
+          "location": "Europa",
+          "quote": "En Òmnium Cultural, elegimos un sistema de votación seguro y verificable que nos permite celebrar nuestras reuniones estatutarias con todas las garantías para los más de 180.000 miembros de nuestra organización.",
+          "author": "Anna Giralt, Directora",
+          "stats": [
+            { "label": "Miembros totales", "value": "190.000+", "description": "Una de las organizaciones culturales más grandes de Europa" },
+            { "label": "Asambleas realizadas", "value": "3", "description": "Más una elección importante" },
+            { "label": "Alcance global", "value": "Mundial", "description": "Los miembros votan desde cualquier ubicación" }
+          ],
+          "impact": "Estableció un nuevo estándar para votación segura y verificable a gran escala, aprovechando la tecnología blockchain para garantizar transparencia, privacidad y accesibilidad para una vasta membresía internacional.",
+          "highlights": [
+            "zkSNARKs para completo anonimato del votante",
+            "Registros de voto inmutables en blockchain",
+            "Acceso global compatible con móviles",
+            "Verificación independiente sin revelar identidad del votante"
+          ]
+        },
+        "fcBarcelona": {
+          "organization": "FC Barcelona",
+          "industry": "Club deportivo",
+          "location": "Barcelona, España",
+          "quote": "La naturaleza descentralizada de la infraestructura de votación aseguró que ninguna entidad individual pudiera manipular o bloquear el proceso, proporcionando acceso ininterrumpido a miles de miembros internacionales.",
+          "author": "FC Barcelona",
+          "stats": [
+            { "label": "Votantes internacionales", "value": "Miles", "description": "Participación del club de aficionados global" },
+            { "label": "Nivel de seguridad", "value": "2FA", "description": "Autenticación de dos factores requerida" },
+            { "label": "Reducción de costes", "value": "Significativa", "description": "vs votación presencial tradicional" }
+          ],
+          "impact": "Revolucionó el compromiso de los aficionados con la primera elección totalmente digital para el Consell Consultiu de Penyes, permitiendo la participación global mientras se mantienen los más altos estándares de seguridad.",
+          "highlights": [
+            "Encriptación de extremo a extremo y firmas ciegas",
+            "Registro de auditoría blockchain público",
+            "Infraestructura resistente a la censura",
+            "Conmutación por error sin interrupciones entre nodos"
+          ]
+        },
+        "erc": {
+          "organization": "Esquerra Republicana de Catalunya (ERC)",
+          "industry": "Partido político",
+          "location": "Cataluña, España",
+          "quote": "Con tal importancia en juego, fue crucial que la elección se realizara con máxima integridad y seguridad, algo que la infraestructura blockchain de Vocdoni garantizó de manera impecable.",
+          "author": "Liderazgo de ERC",
+          "stats": [
+            { "label": "Impacto político", "value": "Nacional", "description": "Influyó en el apoyo al Presidente español" },
+            { "label": "Métodos de votación", "value": "Múltiples", "description": "Soporte para votación por orden de preferencia y referéndums" },
+            { "label": "Participación", "value": "Aumentada", "description": "Miembros jóvenes e internacionales comprometidos" }
+          ],
+          "impact": "Un voto digital de alto riesgo a nivel nacional que moldeó la política nacional mientras demostraba cómo la tecnología blockchain puede mejorar la confianza, transparencia y participación en procesos democráticos.",
+          "highlights": [
+            "Soporte para votación por orden de preferencia",
+            "Resultados auditables en tiempo real",
+            "Votos asegurados criptográficamente",
+            "Boletas anónimas pero verificables"
+          ]
+        },
+        "coeic": {
+          "organization": "COEIC",
+          "industry": "Asociación profesional",
+          "location": "Cataluña, España",
+          "quote": "La votación remota permitió que más ingenieros participaran en el proceso de toma de decisiones sin restricciones geográficas, resultando en resultados más representativos.",
+          "author": "Liderazgo de COEIC",
+          "stats": [
+            { "label": "Participación de votantes", "value": "Aumentada", "description": "Mayor compromiso en todas las regiones" },
+            { "label": "Integración", "value": "Perfecta", "description": "Transmisión en vivo y acceso a documentos" },
+            { "label": "Cumplimiento", "value": "GDPR", "description": "Adhesión completa a normativa de privacidad" }
+          ],
+          "impact": "Modernizó la gobernanza de la Asamblea General Anual con votación blockchain, integración de transmisión en vivo y accesibilidad mejorada, haciendo la participación más fácil e inclusiva para todos los miembros.",
+          "highlights": [
+            "Interfaz de votación de marca personalizada",
+            "Transmisión de video integrada",
+            "Verificación de resultados en tiempo real",
+            "Votos anónimos pero auditables"
+          ]
+        },
+        "decidim": {
+          "organization": "Integración Decidim",
+          "industry": "Integración de software",
+          "location": "Global",
+          "quote": "La infraestructura basada en blockchain de Vocdoni previene la manipulación de votos, el acceso no autorizado y la manipulación, haciéndola una solución ideal para elecciones y procesos de gobernanza de alto riesgo.",
+          "author": "Asociación Decidim",
+          "stats": [
+            { "label": "Tipo de plataforma", "value": "Código abierto", "description": "Software de democracia digital" },
+            { "label": "Integración", "value": "Plug & Play", "description": "No se necesitan cambios de infraestructura" },
+            { "label": "Escalabilidad", "value": "Alta", "description": "Soporta altas tasas de participación" }
+          ],
+          "impact": "Asociación oficial que trae votación blockchain verificable a una plataforma de gobernanza participativa ampliamente utilizada, permitiendo a municipios y organizaciones de todo el mundo realizar elecciones digitales seguras.",
+          "highlights": [
+            "SDK y API amigables para desarrolladores",
+            "Componentes UI preconfigurados y personalizables",
+            "Verificabilidad de extremo a extremo",
+            "Cumplimiento GDPR listo para usar"
+          ]
+        }
+      }
     }
   }
 }

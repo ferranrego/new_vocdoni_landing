@@ -14,6 +14,9 @@ import {
 import { cn } from "@/lib/utils";
 import * as React from "react";
 import { useTranslation } from "react-i18next";
+import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
 
 // Example data
 const buildProductFeatures = (t: (key: string) => string) => [
@@ -33,6 +36,14 @@ const buildProductFeatures = (t: (key: string) => string) => [
     description: t("navbar.productFeatures.customProjects.description"),
   },
 ];
+
+const buildFeaturedSolution = (t: (key: string) => string) => ({
+  title: t("navbar.featuredSolution.vocdoniApp.title"),
+  description: t("navbar.featuredSolution.vocdoniApp.description"),
+  href: "https://app.vocdoni.io",
+  cta: t("navbar.featuredSolution.vocdoniApp.cta"),
+  badge: t("navbar.featuredSolution.vocdoniApp.badge"),
+});
 
 const buildTechnologyItems = (t: (key: string) => string) => [
   {
@@ -73,12 +84,14 @@ const buildAboutItems = (t: (key: string) => string) => [
 const buildResourcesItems = (t: (key: string) => string) => [
   {
     title: t("navbar.resourcesItems.blog.title"),
-    href: "/blog",
+    href: "https://blog.vocdoni.io",
+    target: "_blank",
+    rel: "noopener noreferrer",
     description: t("navbar.resourcesItems.blog.description"),
   },
   {
     title: t("navbar.resourcesItems.successStories.title"),
-    href: "/success-stories",
+    href: "/use-cases#success-stories",
     description: t("navbar.resourcesItems.successStories.description"),
   },
   {
@@ -88,7 +101,9 @@ const buildResourcesItems = (t: (key: string) => string) => [
   },
   {
     title: t("navbar.resourcesItems.docs.title"),
-    href: "/docs",
+    href: "https://developer.vocdoni.io",
+    target: "_blank",
+    rel: "noopener noreferrer",
     description: t("navbar.resourcesItems.docs.description"),
   },
 ];
@@ -103,47 +118,94 @@ export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const productFeatures = React.useMemo(() => buildProductFeatures(t), [t]);
+  const featuredSolution = React.useMemo(() => buildFeaturedSolution(t), [t]);
   const technologyItems = React.useMemo(() => buildTechnologyItems(t), [t]);
   const aboutItems = React.useMemo(() => buildAboutItems(t), [t]);
   const resourcesItems = React.useMemo(() => buildResourcesItems(t), [t]);
 
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 w-full cursor-none pointer-events-none">
-      <header className="pointer-events-auto flex items-center justify-between gap-4 rounded-full border border-border/40 bg-background/80 px-4 py-2 shadow-sm backdrop-blur-md md:gap-8">
+      <header className="pointer-events-auto flex items-center justify-between gap-4 rounded-full border border-border/40 bg-background/80 px-4 py-2 shadow-sm backdrop-blur-md md:gap-8 min-w-fit max-w-[95vw] transition-all duration-300">
         {/* Logo */}
         <div>
           <Logo />
         </div>
 
         {/* Desktop Navigation */}
-        <NavigationMenu className="hidden md:flex">
+        <NavigationMenu className="hidden md:flex min-w-[600px] lg:min-w-[700px]">
           <NavigationMenuList>
-            {/* About Us */}
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>{t("navbar.about")}</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {aboutItems.map((item) => (
-                    <ListItem key={item.title} title={item.title} href={item.href}>
-                      {item.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-
             {/* Solutions (formerly Product) */}
             <NavigationMenuItem>
               <NavigationMenuTrigger>{t("navbar.solutions")}</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {productFeatures.map((item) => (
-                    <ListItem key={item.title} title={item.title} href={item.href}>
-                      {item.description}
-                    </ListItem>
-                  ))}
-                </ul>
+                <div className="w-[650px] p-6">
+                  <div className="grid grid-cols-2 gap-6">
+                    {/* Left column: Regular solution items */}
+                    <div className="space-y-2">
+                      <h4 className="mb-3 px-2 text-sm text-muted-foreground font-medium">
+                        {t("navbar.solutionsHeader")}
+                      </h4>
+                      <ul className="space-y-0.5">
+                        {productFeatures.map((item) => (
+                          <li key={item.title}>
+                            <NavigationMenuLink asChild>
+                              <a
+                                href={item.href}
+                                className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                              >
+                                <div className="text-sm font-medium leading-none">{item.title}</div>
+                                <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                  {item.description}
+                                </p>
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Right column: Featured card with image */}
+                    <div className="relative flex flex-col">
+                      <h4 className="mb-2 px-2 text-sm text-muted-foreground font-medium">
+                        {t("navbar.featuredSolution.header")}
+                      </h4>
+                      <a href={featuredSolution.href} target="_blank" rel="noopener noreferrer" className="block h-full overflow-hidden rounded-md">
+                        <div className="relative h-full">
+                          {/* App highlight image */}
+                          <img
+                            src="/assets/navbar_app_highlight.webp"
+                            alt="Vocdoni App"
+                            className="aspect-video w-full object-cover"
+                          />
+                          {/* Gradient overlay */}
+                          <span className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                          {/* Content overlay */}
+                          <span className="absolute bottom-0 p-4 text-white">
+                            <div className="flex items-center gap-2 mb-1">
+                              <h3 className="font-semibold text-sm">{featuredSolution.title}</h3>
+                              {featuredSolution.badge && (
+                                <Badge variant="secondary" className="text-xs px-2 py-0">
+                                  {featuredSolution.badge}
+                                </Badge>
+                              )}
+                            </div>
+                            {featuredSolution.description && (
+                              <p className="text-xs text-white/90">{featuredSolution.description}</p>
+                            )}
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* Use Cases */}
+            <NavigationMenuItem>
+              <a href="/use-cases" className={navigationMenuTriggerStyle()}>
+                {t("navbar.useCases")}
+              </a>
             </NavigationMenuItem>
 
             {/* Technology */}
@@ -166,6 +228,20 @@ export function Navbar() {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {resourcesItems.map((item) => (
+                    <ListItem key={item.title} title={item.title} href={item.href} target={item.target} rel={item.rel}>
+                      {item.description}
+                    </ListItem>
+                  ))}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+            {/* About Us */}
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>{t("navbar.about")}</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {aboutItems.map((item) => (
                     <ListItem key={item.title} title={item.title} href={item.href}>
                       {item.description}
                     </ListItem>
@@ -183,7 +259,7 @@ export function Navbar() {
         </NavigationMenu>
 
         {/* Right Side: App Button, Language Switcher & Mobile Menu */}
-        <div className="flex items-center gap-2 pr-2">
+        <div className="flex items-center gap-2">
           <LanguageSwitcher />
           {/* Mobile Menu Trigger */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -203,48 +279,42 @@ export function Navbar() {
                 {/* Menu Items */}
                 <div className="flex-1 overflow-auto py-6 px-4">
                   <Accordion type="single" collapsible className="w-full">
-                    {/* About Us */}
-                    <AccordionItem value="about">
-                      <AccordionTrigger className="text-sm font-medium">{t("navbar.about")}</AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex flex-col space-y-2 pl-4">
-                          {aboutItems.map((item) => (
-                            <a
-                              key={item.title}
-                              href={item.href}
-                              className="text-sm text-muted-foreground hover:text-foreground py-2 block"
-                            >
-                              {item.title}
-                            </a>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-
-                    {/* Product */}
                     {/* Solutions (mobile) */}
                     <AccordionItem value="product">
                       <AccordionTrigger className="text-sm font-medium">{t("navbar.solutions")}</AccordionTrigger>
                       <AccordionContent>
                         <div className="flex flex-col space-y-2 pl-4">
-                          {productFeatures.map((item) => (
+                          {/* Featured solution - mobile version */}
+                          <div className="mb-2 p-3 rounded-lg bg-primary/5 border border-primary/20">
                             <a
-                              key={item.title}
-                              href={item.href}
-                              className="text-sm text-muted-foreground hover:text-foreground py-2 block"
+                              href={featuredSolution.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="block"
                             >
-                              {item.title}
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="flex-1">
+                                  <div className="flex items-center gap-2 mb-1">
+                                    <span className="text-sm font-semibold">
+                                      {featuredSolution.title}
+                                    </span>
+                                    {featuredSolution.badge && (
+                                      <Badge variant="secondary" className="text-xs px-1.5 py-0">
+                                        {featuredSolution.badge}
+                                      </Badge>
+                                    )}
+                                  </div>
+                                  <span className="text-xs text-muted-foreground block">
+                                    {featuredSolution.description}
+                                  </span>
+                                </div>
+                                <ArrowRight className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                              </div>
                             </a>
-                          ))}
-                        </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                    {/* Resources (mobile) */}
-                    <AccordionItem value="resources">
-                      <AccordionTrigger className="text-sm font-medium">{t("navbar.resources")}</AccordionTrigger>
-                      <AccordionContent>
-                        <div className="flex flex-col space-y-2 pl-4">
-                          {resourcesItems.map((item) => (
+                          </div>
+
+                          {/* Regular items */}
+                          {productFeatures.map((item) => (
                             <a
                               key={item.title}
                               href={item.href}
@@ -274,15 +344,53 @@ export function Navbar() {
                         </div>
                       </AccordionContent>
                     </AccordionItem>
+
+                    {/* Resources (mobile) */}
+                    <AccordionItem value="resources">
+                      <AccordionTrigger className="text-sm font-medium">{t("navbar.resources")}</AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col space-y-2 pl-4">
+                          {resourcesItems.map((item) => (
+                            <a
+                              key={item.title}
+                              href={item.href}
+                              target={item.target}
+                              rel={item.rel}
+                              className="text-sm text-muted-foreground hover:text-foreground py-2 block"
+                            >
+                              {item.title}
+                            </a>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+
+                    {/* About Us */}
+                    <AccordionItem value="about">
+                      <AccordionTrigger className="text-sm font-medium">{t("navbar.about")}</AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col space-y-2 pl-4">
+                          {aboutItems.map((item) => (
+                            <a
+                              key={item.title}
+                              href={item.href}
+                              className="text-sm text-muted-foreground hover:text-foreground py-2 block"
+                            >
+                              {item.title}
+                            </a>
+                          ))}
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
                   </Accordion>
 
                   {/* Static Links */}
                   <div className="mt-4 flex flex-col space-y-4">
                     <a
-                      href="/resources"
+                      href="/use-cases"
                       className="text-sm font-medium hover:text-primary transition-colors py-2 border-b border-border/40"
                     >
-                      {t("navbar.resources")}
+                      {t("navbar.useCases")}
                     </a>
                     <a
                       href="/contact"

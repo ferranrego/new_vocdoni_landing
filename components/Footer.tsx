@@ -2,7 +2,8 @@ import gdprLogo from "@/assets/gdpr.png";
 import isoLogo from "@/assets/iso-27001.png";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Github, Globe, Send, Twitter } from "lucide-react";
+import { Icon } from "@iconify/react";
+import { ArrowRight, Globe, Send } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 
@@ -23,7 +24,7 @@ export default function Footer() {
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Github className="h-5 w-5" />
+                <Icon icon="simple-icons:github" className="h-5 w-5" />
               </a>
               <a
                 href="https://twitter.com/vocdoni"
@@ -31,7 +32,23 @@ export default function Footer() {
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Twitter className="h-5 w-5" />
+                <Icon icon="simple-icons:x" className="h-5 w-5" />
+              </a>
+              <a
+                href="https://bsky.app/profile/vocdoni.io"
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Icon icon="simple-icons:bluesky" className="h-5 w-5" />
+              </a>
+              <a
+                href="https://chat.vocdoni.io"
+                target="_blank"
+                rel="noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Icon icon="ic:baseline-discord" className="h-5 w-5" />
               </a>
               <a
                 href="https://t.me/vocdoni"

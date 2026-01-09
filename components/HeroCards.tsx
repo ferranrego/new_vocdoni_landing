@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const avatars = [
   {
@@ -27,31 +28,32 @@ const avatars = [
 ];
 
 export const CensusCard = () => {
+  const { t } = useTranslation();
   return (
     <Card className="shadow-lg border-muted/40 backdrop-blur-sm bg-card/95 w-full">
       <CardHeader className="pb-3 p-4">
         <div className="flex items-center justify-between">
-          <Badge variant="secondary" className="text-[10px] h-5">Step 1</Badge>
+          <Badge variant="secondary" className="text-[10px] h-5">{t("heroCards.step1")}</Badge>
           <Database className="h-4 w-4 text-muted-foreground" />
         </div>
-        <CardTitle className="text-sm">Census Creation</CardTitle>
+        <CardTitle className="text-sm">{t("heroCards.censusCreation")}</CardTitle>
       </CardHeader>
       <CardContent className="p-4 pt-0">
         <div className="space-y-2">
           <div className="rounded-md border bg-muted/30 p-2">
             <div className="text-[10px] font-medium text-muted-foreground mb-1.5 flex justify-between">
-              <span>Name</span>
-              <span>Status</span>
+              <span>{t("heroCards.nameLabel")}</span>
+              <span>{t("heroCards.statusLabel")}</span>
             </div>
             <div className="flex flex-col gap-1.5">
               {[
-                { name: "Alice Freeman", status: "Eligible" },
-                { name: "Bob Smith", status: "Not eligible" },
-                { name: "Charlie Brown", status: "Eligible" }
+                { name: "Alice Freeman", status: t("heroCards.eligible") },
+                { name: "Bob Smith", status: t("heroCards.notEligible") },
+                { name: "Charlie Brown", status: t("heroCards.eligible") }
               ].map((user, i) => (
                 <div key={i} className="flex justify-between items-center text-xs">
                   <span className="font-medium">{user.name}</span>
-                  <span className={`text-[10px] ${user.status === 'Eligible' ? 'text-green-600' : 'text-amber-600'}`}>
+                  <span className={`text-[10px] ${user.status === t("heroCards.eligible") ? 'text-green-600' : 'text-amber-600'}`}>
                     {user.status}
                   </span>
                 </div>
@@ -65,25 +67,26 @@ export const CensusCard = () => {
 };
 
 export const VotingCard = ({ animated = false }: { animated?: boolean }) => {
+  const { t } = useTranslation();
   return (
     <Card className="shadow-xl border-muted/40 backdrop-blur-sm bg-card/95 w-full">
       <CardHeader className="pb-2 p-4">
         <div className="flex items-center justify-between mb-2">
-          <Badge variant="secondary" className="text-[10px] h-5">Step 2</Badge>
-          <Badge className="bg-green-500/10 text-green-600 hover:bg-green-500/20 border-green-200 text-[10px] pointer-events-none">Active Election</Badge>
+          <Badge variant="secondary" className="text-[10px] h-5">{t("heroCards.step2")}</Badge>
+          <Badge className="bg-green-500/10 text-green-600 hover:bg-green-500/20 border-green-200 text-[10px] pointer-events-none">{t("heroCards.activeElection")}</Badge>
         </div>
-        <CardTitle className="text-base">General Assembly 2025</CardTitle>
-        <CardDescription className="text-xs">Voting closes in 24h</CardDescription>
+        <CardTitle className="text-base">{t("heroCards.electionTitle")}</CardTitle>
+        <CardDescription className="text-xs">{t("heroCards.electionCloses")}</CardDescription>
       </CardHeader>
       <CardContent className="p-4 pt-0">
         <div className="flex items-center justify-between mb-3">
-          <div className="text-xs text-muted-foreground">Participation</div>
+          <div className="text-xs text-muted-foreground">{t("heroCards.participation")}</div>
           <div className="font-bold text-sm">78.4%</div>
         </div>
         <div className="h-1.5 w-full bg-muted rounded-full overflow-hidden mb-3">
           {animated ? (
-             <motion.div 
-                className="h-full bg-primary" 
+             <motion.div
+                className="h-full bg-primary"
                 initial={{ width: 0 }}
                 animate={{ width: "78.4%" }}
                 transition={{ duration: 1.5, delay: 2, ease: "easeOut" }}
@@ -104,7 +107,7 @@ export const VotingCard = ({ animated = false }: { animated?: boolean }) => {
           <Avatar className='ring-background ring-2 h-7 w-7 bg-muted flex items-center justify-center'>
             <AvatarFallback className='text-[9px]'>+152</AvatarFallback>
           </Avatar>
-          <span className="ml-3 text-[10px] text-muted-foreground whitespace-nowrap">voted just now</span>
+          <span className="ml-3 text-[10px] text-muted-foreground whitespace-nowrap">{t("heroCards.votedJustNow")}</span>
         </div>
       </CardContent>
     </Card>
@@ -112,23 +115,24 @@ export const VotingCard = ({ animated = false }: { animated?: boolean }) => {
 };
 
 export const ResultsCard = ({ animated = false }: { animated?: boolean }) => {
+  const { t } = useTranslation();
   return (
     <Card className="shadow-lg border-muted/40 backdrop-blur-sm bg-card/90 w-full">
       <CardHeader className="pb-3 p-4">
         <div className="flex items-center justify-between">
-          <Badge variant="secondary" className="text-[10px] h-5">Step 3</Badge>
+          <Badge variant="secondary" className="text-[10px] h-5">{t("heroCards.step3")}</Badge>
           <ShieldCheck className="h-4 w-4 text-purple-500" />
         </div>
-        <CardTitle className="text-sm">Verified Results</CardTitle>
+        <CardTitle className="text-sm">{t("heroCards.verifiedResults")}</CardTitle>
       </CardHeader>
       <CardContent className="p-4 pt-0">
         <div className="space-y-3">
           {/* Fake Results */}
           <div className="space-y-2">
             {[
-              { label: "Option A", val: 62 },
-              { label: "Option B", val: 28 },
-              { label: "Abstain", val: 10 }
+              { label: t("previews.appPreview.optionA"), val: 62 },
+              { label: t("previews.appPreview.optionB"), val: 28 },
+              { label: t("heroCards.abstain"), val: 10 }
             ].map((opt, i) => (
               <div key={i} className="flex flex-col gap-1">
                 <div className="flex justify-between text-[10px]">
@@ -137,8 +141,8 @@ export const ResultsCard = ({ animated = false }: { animated?: boolean }) => {
                 </div>
                 <div className="h-1 w-full bg-muted rounded-full">
                   {animated ? (
-                    <motion.div 
-                        className="h-full bg-purple-500/80" 
+                    <motion.div
+                        className="h-full bg-purple-500/80"
                         initial={{ width: 0 }}
                         animate={{ width: `${opt.val}%` }}
                         transition={{ duration: 1, delay: 3.5 + (i * 0.2) }}
@@ -154,7 +158,7 @@ export const ResultsCard = ({ animated = false }: { animated?: boolean }) => {
           <div className="flex items-center justify-between pt-1">
             <div className="flex items-center gap-1.5 text-green-600 bg-green-50 dark:bg-green-900/20 px-2 py-1 rounded-md border border-green-200 dark:border-green-900/50">
               <FileCheck className="h-3 w-3" />
-              <span className="text-[10px] font-medium">Legally Valid</span>
+              <span className="text-[10px] font-medium">{t("heroCards.legallyValid")}</span>
             </div>
             <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground/60 font-mono">
               <Hash className="h-3 w-3" />

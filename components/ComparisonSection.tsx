@@ -2,6 +2,7 @@ import { CircleCheckIcon, XCircleIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { MotionPreset } from "@/components/ui/motion-preset";
 
 import { cn } from "@/lib/utils";
 
@@ -33,42 +34,45 @@ const ComparisonSection = ({
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-12 sm:space-y-16 lg:space-y-24">
           {/* Header */}
-          <div className="space-y-4">
-            <p className="text-primary text-sm font-medium uppercase">{t("comparison.eyebrow")}</p>
+          <MotionPreset fade blur slide delay={0} transition={{ duration: 0.5 }} inView inViewOnce>
+            <div className="space-y-4">
+              <p className="text-primary text-sm font-medium uppercase">{t("comparison.eyebrow")}</p>
 
-            <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">{t("comparison.title")}</h2>
+              <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">{t("comparison.title")}</h2>
 
-            <p className="text-muted-foreground text-xl max-w-3xl">{t("comparison.description")}</p>
-          </div>
+              <p className="text-muted-foreground text-xl max-w-3xl">{t("comparison.description")}</p>
+            </div>
+          </MotionPreset>
 
           {/* Table - Desktop */}
-          <div className="hidden lg:block overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-1/4"></TableHead>
-                  {options.map((option) => (
-                    <TableHead
-                      key={option.name}
-                      className={cn("text-center", {
-                        "bg-primary/10": option.isHighlighted,
-                      })}
-                    >
-                      <div className="flex flex-col items-center justify-center gap-1.5 py-3">
-                        <h3
-                          className={cn("text-lg font-semibold sm:text-xl", {
-                            "text-primary": option.isHighlighted,
-                          })}
-                        >
-                          {t(option.name)}
-                        </h3>
-                      </div>
-                    </TableHead>
-                  ))}
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {featureLabels.map((feature, index) => {
+          <MotionPreset fade blur slide delay={0.1} transition={{ duration: 0.5 }} inView inViewOnce>
+            <div className="hidden lg:block overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-1/4"></TableHead>
+                    {options.map((option) => (
+                      <TableHead
+                        key={option.name}
+                        className={cn("text-center", {
+                          "bg-primary/10": option.isHighlighted,
+                        })}
+                      >
+                        <div className="flex flex-col items-center justify-center gap-1.5 py-3">
+                          <h3
+                            className={cn("text-lg font-semibold sm:text-xl", {
+                              "text-primary": option.isHighlighted,
+                            })}
+                          >
+                            {t(option.name)}
+                          </h3>
+                        </div>
+                      </TableHead>
+                    ))}
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {featureLabels.map((feature, index) => {
                   const featureKey = featureKeys[index];
 
                   return (
@@ -105,20 +109,30 @@ const ComparisonSection = ({
                       })}
                     </TableRow>
                   );
-                })}
-              </TableBody>
-            </Table>
-          </div>
+                  })}
+                </TableBody>
+              </Table>
+            </div>
+          </MotionPreset>
 
           {/* Cards - Mobile & Tablet */}
           <div className="lg:hidden space-y-6">
-            {options.map((option) => (
-              <div
+            {options.map((option, index) => (
+              <MotionPreset
                 key={option.name}
-                className={cn("rounded-lg border p-6 space-y-4", {
-                  "border-primary bg-primary/5": option.isHighlighted,
-                })}
+                fade
+                blur
+                slide
+                delay={0.1 + index * 0.1}
+                transition={{ duration: 0.5 }}
+                inView
+                inViewOnce
               >
+                <div
+                  className={cn("rounded-lg border p-6 space-y-4", {
+                    "border-primary bg-primary/5": option.isHighlighted,
+                  })}
+                >
                 <h3
                   className={cn("text-xl font-semibold text-center", {
                     "text-primary": option.isHighlighted,
@@ -144,10 +158,11 @@ const ComparisonSection = ({
                           <span className="text-sm font-medium">{t(featureValue.text)}</span>
                         </div>
                       </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              </MotionPreset>
             ))}
           </div>
         </div>

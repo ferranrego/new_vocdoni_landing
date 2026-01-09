@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { MotionPreset } from "@/components/ui/motion-preset";
 import { useTranslation } from "react-i18next";
 
 export type TestimonialItem = {
@@ -23,7 +24,7 @@ const TestimonialsSection = () => {
         }}
       >
         {/* Left Content */}
-        <div className="space-y-4 sm:w-1/2 lg:w-1/3">
+        <MotionPreset fade blur slide delay={0} transition={{ duration: 0.5 }} inView inViewOnce className="space-y-4 sm:w-1/2 lg:w-1/3">
           <p className="text-primary text-sm font-medium uppercase">{t("testimonials.eyebrow")}</p>
 
           <h2 className="text-2xl font-semibold sm:text-3xl lg:text-4xl">{t("testimonials.title")}</h2>
@@ -34,10 +35,10 @@ const TestimonialsSection = () => {
             <CarouselPrevious className="static translate-y-0" />
             <CarouselNext className="static translate-y-0" />
           </div>
-        </div>
+        </MotionPreset>
 
         {/* Right Testimonial Carousel */}
-        <div className="relative max-w-196 sm:w-1/2 lg:w-2/3">
+        <MotionPreset fade blur slide delay={0.1} transition={{ duration: 0.5 }} inView inViewOnce className="relative max-w-196 sm:w-1/2 lg:w-2/3">
           <CarouselContent className="sm:-ml-6">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="sm:pl-6 lg:basis-1/2">
@@ -64,10 +65,10 @@ const TestimonialsSection = () => {
                     <p>{testimonial.content}</p>
                   </CardContent>
                 </Card>
-              </CarouselItem>
-            ))}
+                </CarouselItem>
+              ))}
           </CarouselContent>
-        </div>
+        </MotionPreset>
       </Carousel>
     </section>
   );

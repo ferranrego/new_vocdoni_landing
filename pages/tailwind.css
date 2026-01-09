@@ -3,7 +3,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.9383 0.0042 236.4993);
+  --background: oklch(0.976 0.008 85);
   --foreground: oklch(0.3211 0 0);
   --card: oklch(1.0000 0 0);
   --card-foreground: oklch(0.3211 0 0);
@@ -161,6 +161,24 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+  --animate-marquee-horizontal: marquee-horizontal var(--marquee-duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--marquee-duration) infinite linear;
+  @keyframes marquee-horizontal {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--marquee-gap)));
+    }
+  }
 }
 
 @layer base {
